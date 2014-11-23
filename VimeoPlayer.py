@@ -117,7 +117,10 @@ class VimeoPlayer():
                 title = "No Title"
             title = self.common.replaceHTMLCodes(title)
             video['Title'] = title
-            h264 = collection["request"]["files"]["h264"]
+            try:
+               h264 = collection["request"]["files"]["h264"]
+            except:
+               h264 = collection["request"]["files"]["vp6"]
             video['Duration'] = "0"
             video['thumbnail'] = ""
             video['Studio'] = ""
