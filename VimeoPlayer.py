@@ -109,7 +109,10 @@ class VimeoPlayer():
                 video['isHD'] = "1"
         elif collection.has_key("request"):
             video['videoid'] = get("videoid")
-            title = "" #collection["config"]["video"]["title"]
+            try:
+               title = collection["video"]["title"]
+            except:
+               title = "" #collection["config"]["video"]["title"]
             if len(title) == 0:
                 title = "No Title"
             title = self.common.replaceHTMLCodes(title)
