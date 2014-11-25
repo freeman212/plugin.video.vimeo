@@ -1,3 +1,5 @@
+Version 3.6.8 - fix for HD
+
 Version 3.6.7 - fix for when "h264" not present
 
 Version 3.6.6 - dzebrys fix for video title 11-23-14

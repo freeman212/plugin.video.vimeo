@@ -72,8 +72,14 @@ class VimeoPlayer():
 
     def scrapeVideoInfo(self, params):
         get = params.get
-        #result = self.common.fetchPage({"link": "http://www.vimeo.com/%s" % get("videoid")})
-        result = self.common.fetchPage({"link": "http://player.vimeo.com/video/%s/config?type=moogaloop&referrer=&player_url=player.vimeo.com&v=1.0.0&cdn_url=http://a.vimeocdn.com" % get("videoid")})
+        try:
+          result = self.common.fetchPage({"link": "http://www.vimeo.com/%s" % get("videoid")})
+          result = str(result).replace('\n','')
+          rurl = re.compile('data-config-url="(.+?)"').search(result).group(1)
+          rurl = rurl.replace('&amp;','&')
+          result = self.common.fetchPage({"link":rurl})
+        except:
+          result = self.common.fetchPage({"link": "http://player.vimeo.com/video/%s/config?type=moogaloop&referrer=&player_url=player.vimeo.com&v=1.0.0&cdn_url=http://a.vimeocdn.com" % get("videoid")})
         collection = {}
         if result["status"] == 200:
             html = result["content"]
@@ -127,10 +133,11 @@ class VimeoPlayer():
             video['request_signature'] = ""
             video['request_signature_expires'] = ""
             video['urls'] = h264
+            print "video[urls] = "+str(video['urls'])
 
             if h264.get("hd"):
                 video['isHD'] = "1"
-		video['video_url'] = h264["hd"]["url"]
+                video['video_url'] = h264["hd"]["url"]
             else:
                 video['video_url'] = h264["sd"]["url"]
 
