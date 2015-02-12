@@ -25,6 +25,7 @@
     <setting id="downloads" type="bool" label="30032" default="true" />
     <setting id="search" type="bool" label="30006" default="true" />
     <setting id="playbyid" type="bool" label="30008" default="true" />
+    <setting id="settings" type="bool" label="30028" default="false" />
   </category>
   
   <!-- Advanced -->
