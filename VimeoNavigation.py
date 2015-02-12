@@ -64,7 +64,7 @@ class VimeoNavigation():
                 {'Title':self.language(30006)  ,'path':"/root/search"                           , 'thumbnail':"search"              , 'login':"false" , 'store':"searches" , 'folder':'true'},
                 {'Title':self.language(30007)  ,'path':"/root/search/new"                       , 'thumbnail':"search"              , 'login':"false" , 'api':"search"},
                 {'Title':self.language(30027)  ,'path':"/root/login"                            , 'thumbnail':"login"               , 'login':"false" , 'action':"settings"},
-                {'Title':self.language(30028)  ,'path':"/root/settings"                         , 'thumbnail':"settings"            , 'login':"true"  , 'action':"settings"}
+                {'Title':self.language(30028)  ,'path':"/root/settings"                         , 'thumbnail':""                    , 'login':"true"  , 'action':"settings"}
                )
 
     #==================================== Main Entry Points===========================================
