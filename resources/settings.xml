@@ -33,6 +33,6 @@
   	<setting id="list_view" type="enum" label="30221" lvalues="30229|30230|30231" default="0" />
     <setting id="hd_videos_download" type="enum" label="30222" lvalues="30223|30216|30215" default="0" />
     <setting id="debug" type="bool" label="30218" default="false" />
-    <setting id="high_quality_thumbs" label="30226" default="false" />
+    <setting id="high_quality_thumbs" label="30226" default="true" />
   </category>
 </settings>
