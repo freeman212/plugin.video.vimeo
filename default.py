@@ -8,10 +8,10 @@ import urllib2
 import cookielib
 
 # plugin constants
-version = "3.5.2"
+version = "3.6.8"
 plugin = "Vimeo-" + version
 author = "TheCollective"
-url = "www.xbmc.com"
+url = "kodi.tv"
 
 # xbmc hooks
 settings = xbmcaddon.Addon(id='plugin.video.vimeo')
