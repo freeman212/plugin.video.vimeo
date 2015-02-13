@@ -1,5 +1,5 @@
 '''
-    Vimeo plugin for XBMC
+    Vimeo plugin for Kodi
     Copyright (C) 2010-2012 Tobias Ussing And Henrik Mosgaard Jensen
 
     This program is free software: you can redistribute it and/or modify
