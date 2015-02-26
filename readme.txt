@@ -1,3 +1,6 @@
+Version 3.7.0 - added flat icons & fanart (by freem@n / inspired by bromix)
+              - added option to hide the settings button
+
 Version 3.6.9 - added dependancy for script.module.addon.common
 
 Version 3.6.8 - fix for HD
